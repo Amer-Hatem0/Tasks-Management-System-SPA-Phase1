@@ -1,0 +1,106 @@
+ 
+
+@background-color: #3a3a3a;
+@input-background: #222;
+@text-color: #fff;
+@button-color: #4CAF50;
+@button-hover: #45a049;
+
+body {
+    background-color: @background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: @text-color;
+}
+
+.container {
+    background-color: @input-background;
+    padding: 50px;
+    padding-right: 70px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: @background-color;
+    color: @text-color;
+}
+
+.stay-signed-in {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    
+ 
+
+    input {
+ 
+    width: 15px;
+   margin-right: 10px;
+    }
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: @button-color;
+    color: @text-color;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+        background-color: @button-hover;
+    }
+}
+.student-check{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    
+    input {
+ 
+        width: 15px;
+       margin-right: 10px;
+        }
+
+}
+ 
+        .signin-button {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        .signin-button:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+        }
+
+ 

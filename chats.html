@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+  <title>Chat Page</title>
+  <link rel="stylesheet" href="Css/dashboard.css">
+  <link rel="stylesheet" href="Css/chats.css">
+  <link rel="stylesheet" href="Css/general.css">
+
+</head>
+<body>
+  <div class="nav">
+    <div class="admin-info">
+        <span id="admin-name">Admin   <span id="adminname">  </span></span>
+        <a href="SignIn.html"><button class="logout-btn">Logout</button></a>
+    </div>
+</div>
+  <div class="a">
+    <div class="sidebar">
+      <ul>
+          <li> <a href="Index.html">Home</a></li>
+          <li> <a href="Projects.html" >Projects</a></li>
+          <li><a href="tasks.html">Tasks</a></li>
+          <li class="active"><a href="chats.html" >Chat</a></li>
+      </ul>
+  </div>
+    <div class="chat-container">
+      <div class="student-list">
+        <h2>List of Students</h2>
+        <div class="students" id="students"></div>
+      </div>
+      <div class="chat-window">
+        <div class="chat-header" id="chatHeader">Chatting with ...</div>
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-input">
+          <input type="text" id="messageInput" placeholder="Type your message...">
+          <button id="sendBtn">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="Js/chats.js"></script>
+<script defer src="Js/General.js"></script>
+</body>
+</html>

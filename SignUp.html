@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="Css/signup.css">
+  
+</head>
+<body>
+    <div class="container">
+        <form id="signup-form" class="form-box">
+            <h2>Sign Up</h2>
+            <label for="signup-username">Username</label>
+            <input type="text" id="signup-username" placeholder="Choose a username" required>
+
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" placeholder="Create a password" required>
+
+            <div class="student-check">
+                <input type="checkbox" id="student-checkbox">
+                <label for="student-checkbox">I am a student</label>
+            </div>
+
+            <div id="student-id-container" class="hidden">
+                <label for="student-id">University ID</label>
+                <input type="text" id="student-id" placeholder="Enter your university ID">
+            </div>
+
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="signin.html">Sign In</a></p>
+        </form>
+    </div>
+
+  <script defer src="Js/SignUp.js"></script>
+</body>
+</html>
+
+
+
+
+
+ 

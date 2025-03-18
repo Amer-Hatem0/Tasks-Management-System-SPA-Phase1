@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Dashboard</title>
+    <link rel="stylesheet" href="Css/dashboard.css">
+    <link rel="stylesheet" href="Css/general.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="Js/Index.js"></script>
+</head>
+<body>
+   
+    <div class="nav">
+        <div class="admin-info">
+            <span id="admin-name">Student   <span id="adminname">  </span></span>
+            <a href="SignIn.html"><button class="logout-btn">Logout</button></a>
+        </div>
+    </div>
+
+    <div class="a">
+        <div class="sidebar">
+            <ul>
+                <li class="active"><a href="StudentDashboard.html">Home</a></li>
+                <li><a href="StudentProject.html">My Projects</a></li>
+                <li><a href="StudentTask.html" >My Tasks</a></li>
+                <li ><a href="chatsStd.html" >Chat</a></li>
+              </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h2>Welcome to Your Student Dashboard</h2>
+                <span class="date-time timeSpan" id="datetime"></span>
+            </div>
+            <div class="stats">
+                <div class="stat-box">Number of Assigned Tasks <br><strong>5</strong></div>
+                <div class="stat-box">Completed Tasks <br><strong>2</strong></div>
+                <div class="stat-box">Pending Tasks <br><strong>3</strong></div>
+            </div>
+            <div class="chart-container">
+                <canvas id="dashboardChart"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+            if (currentUser && currentUser.role === "student") {
+                document.getElementById("student-name").innerText = currentUser.username;
+            } else {
+                alert("Access Denied! Redirecting to Sign In...");
+                window.location.href = "SignIn.html";
+            }
+
+            function updateDateTime() {
+                document.getElementById('datetime').innerText = new Date().toLocaleString();
+            }
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+        };
+
+        function logout() {
+            localStorage.removeItem("currentUser");
+            window.location.href = "SignIn.html";
+        }
+    </script>
+      <script defer src="Js/General.js"></script>
+</body>
+</html>

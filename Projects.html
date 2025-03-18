@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="Css/projects.css">
+    <link rel="stylesheet" href="Css/addmodal.css">
+    <link rel="stylesheet" href="Css/general.css">
+</head>
+<body>
+  
+    <div class="nav">
+        <div class="admin-info">
+            <span id="admin-name">Admin   <span id="adminname">  </span></span>
+            <a href="SignIn.html"><button class="logout-btn">Logout</button></a>
+        </div>
+    </div>
+    <div class="a">
+        <div class="sidebar">
+            <ul>
+                <li> <a href="Index.html">Home</a></li>
+                <li class="active"> <a href="Projects.html" >Projects</a></li>
+                <li><a href="tasks.html" >Tasks</a></li>
+                <li><a href="chats.html" >Chat</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <h2>Projects Overview</h2>
+                <!-- <span class="date-time timeSpan" id="datetime"></span> -->
+            </div>
+            <div id="searchDiv">
+                <button type="button" id="openProjectModal" class=" ">Add New Project</button>
+                <div class="filters">
+                    <input type="text" placeholder="Search projects by title or description...">
+                    <select>
+                        <option>All Statuses</option>
+                        <option>In Progress</option>
+                        <option>Completed</option>
+                        <option>Pending</option>
+                        <option>On Hold</option>
+                        <option>Cancelled</option>
+                    </select>
+                </div>
+            </div>
+            <!-- <div class="stats">
+                <div class="stat-box">Number of Assigned Tasks <br><strong>5</strong></div>
+                <div class="stat-box">Completed Tasks <br><strong>2</strong></div>
+                <div class="stat-box">Pending Tasks <br><strong>3</strong></div>
+            </div>
+            <div class="chart-container">
+                <canvas id="dashboardChart"></canvas>
+            </div> -->
+            <div id="projectsContainer"></div>
+        </div>
+    </div>
+    <!-- Container for dynamically loaded modal -->
+    <div id="modalContainer"></div>
+    <div id="addProjectModal" class="modal">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Add New Project</h2>
+        <form method="dialog" id="projectform">
+            <div class="form-row">
+                <label for="projectTitle">Project Title:</label>
+                <input type="text" id="projectTitle" placeholder="Enter project title" required>
+            </div>
+    
+            <!-- Project Description -->
+            <div class="form-row">
+                <label for="projectDescription">Project Description:</label>
+                <textarea id="projectDescription" placeholder="Enter project description" required></textarea>
+            </div>
+    
+            <!-- Students List -->
+            <div class="form-row">
+                <label for="studentsList">Students List:</label>
+                <select id="studentsList" multiple required>
+                    
+                </select>
+            </div>
+    
+            <!-- Project Category -->
+            <div class="form-row">
+                <label for="projectCategory">Project Category:</label>
+                <select id="projectCategory" required>
+                    <option value="">Select a category</option>
+                    <option>Web Development</option>
+                    <option>Mobile Development</option>
+                    <option>Data Science</option>
+                    <option>Machine Learning</option>
+                </select>
+            </div>
+    
+            <!-- Start Date -->
+            <div class="form-row">
+                <label for="startDate">Starting Date:</label>
+                <input type="date" id="startDate">
+            </div>
+    
+            <!-- End Date -->
+            <div class="form-row">
+                <label for="endDate">Ending Date:</label>
+                <input type="date" id="endDate">
+            </div>
+    
+            <!-- Project Status -->
+            <div class="form-row">
+                <label for="projectStatus">Project Status:</label>
+                <select id="projectStatus">
+                    <option>In Progress</option>
+                    <option>Completed</option>
+                    <option>Pending</option>
+                    <option>On Hold</option>
+                    <option>Cancelled</option>
+                </select>
+            </div>
+            <button class="button" type="submit" id="addProjectBtn">Add Project</button>
+        </form>
+    </div >
+    <script src="Js/projects.js"></script>
+    <script src="Js/addmodal.js"></script>
+    <script defer src="Js/General.js"></script>
+</body>
+</html>
+
+
+
+ 
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tasks</title>
+    <link rel="stylesheet" href="Css/dashboard.css">
+    <link rel="stylesheet" href="Css/tasks.css" />
+    <link rel="stylesheet" href="Css/taskmodal.css" />
+    <link rel="stylesheet" href="Css/general.css">
+</head>
+<body>
+    
+    
+    <div class="nav">
+        <div class="admin-info">
+            <span id="admin-name">Student   <span id="adminname">  </span></span>
+            <a href="SignIn.html"><button class="logout-btn">Logout</button></a>
+        </div>
+    </div>
+
+    <div class="a">
+        <div class="sidebar">
+            <ul>
+                <li><a href="StudentDashboard.html">Home</a></li>
+                <li><a href="StudentProject.html">My Projects</a></li>
+                <li class="active"><a href="StudentTask.html" >My Tasks</a></li>
+                <li ><a href="chatsStd.html" >Chat</a></li>
+              </ul>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h2>My Tasks</h2>
+            </div>
+            <table id="tasksTable">
+                <thead>
+                    <tr>
+                        <th>Task ID</th>
+                        <th>Project</th>
+                        <th>Task Name</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="Js/studentTasks.js"></script>
+    <script defer src="Js/General.js"></script>
+</body>
+</html>

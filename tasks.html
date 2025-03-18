@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Tasks Page</title>
+    <link rel="stylesheet" href="Css/dashboard.css">
+    <link rel="stylesheet" href="Css/tasks.css" />
+    <link rel="stylesheet" href="Css/taskmodal.css" />
+    <link rel="stylesheet" href="Css/general.css">
+
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="admin-info">
+            <span id="admin-name">Admin   <span id="adminname">  </span></span>
+            <a href="SignIn.html"><button class="logout-btn">Logout</button></a>
+        </div>
+    </div>
+
+
+    <div class="a">
+        <div class="sidebar">
+            <ul>
+                <li> <a href="Index.html">Home</a></li>
+                <li> <a href="Projects.html" >Projects</a></li>
+                <li class="active"><a href="tasks.html" >Tasks</a></li>
+                <li><a href="chats.html" >Chat</a></li>
+            </ul>
+        </div>
+        <div class="content">
+                <div class="controls">
+                    <div>
+                        <label for="sortSelect">Sort By:</label>
+                        <select id="sortSelect">
+                            <option value="">Sort By</option>
+                            <option value="status">Task Status</option>
+                            <option value="project">Project</option>
+                            <option value="dueDate">Due Date</option>
+                            <option value="assignedStudent">Assigned Student</option>
+                        </select>
+                    </div>
+                    <button id="createTaskBtn">Create a New Task</button>
+                </div>
+                <table id="tasksTable">
+                    <thead>
+                        <tr>
+                            <th>Task ID</th>
+                            <th>Project</th>
+                            <th>Task Name</th>
+                            <th>Description</th>
+                            <th>Assigned Student</th>
+                            <th>Status</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+     
+
+    <div id="modalContainer"></div>
+  <div class="s">
+      <div id="addTaskModal" class="modal">
+    <span class="close">&times;</span>
+    <h2 class="modal-title">Create New task</h2>
+    <form method="dialog" id="taskform">
+        <!-- Project title -->
+        <div class="form-row">
+            <label for="projectTitle">Project Title:</label>
+            <select id="projectTitle" required>
+            <option value="">Select a project</option>
+            <option>Web Redesign</option>
+            <option>Mobile App Development</option>
+            <option>Data Analysis Project</option>
+            <option>Machine Learning Model</option>
+            <option>Machine Learning Model</option>
+        </select>
+        </div>
+
+     <!-- task Name -->
+     <div class="form-row">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" placeholder="Enter task name" required>
+    </div>
+
+     <!-- task Description -->
+     <div class="form-row">
+        <label for="taskDescription">Description:</label>
+        <textarea id="taskDescription" placeholder="Enter task description" required></textarea>
+    </div>
+
+    <!-- Assign student -->
+    <div class="form-row">
+        <label for="studentsList">Assigned Student:</label>
+        <select id="studentsList" required>
+        
+    </select>
+    </div>
+
+    <!-- task status -->
+    <div class="form-row">
+        <label for="taskStatus">Status:</label>
+        <select id="taskStatus">
+            <option>In Progress</option>
+            <option>Completed</option>
+            <option>Pending</option>
+            <option>On Hold</option>
+            <option>Cancelled</option>
+        </select>
+    </div>
+    <div class="form-row">
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate">
+    </div>
+    <button class="button" type="submit" id="addtaskBtn">Add task</button>
+    </form>
+      </div>
+</div>
+</body>
+<script src="Js/tasks.js"></script>
+<script src="Js/taskmodal.js"></script>
+<script defer src="Js/General.js"></script>
+</html>

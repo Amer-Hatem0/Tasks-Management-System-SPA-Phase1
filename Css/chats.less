@@ -1,0 +1,122 @@
+@import "dashboard.less";
+
+.chat-container {
+  display: flex;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.student-list {
+  width: 250px;
+  background-color: #1f1f1f;
+  margin-right: 20px;
+  border-radius: 5px;
+  padding: 10px;
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .students {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .student-item {
+      background-color: #333;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #444;
+      }
+    }
+  }
+}
+
+.chat-window {
+  flex: 1;
+  background-color: #1f1f1f;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+  .chat-header {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    font-size: 1rem;
+  }
+
+  .chat-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    height: fit-content;
+    background-color: #333;
+
+    .chat-message {
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      text-align: right;
+      font-size: 20px;
+    }
+  }
+
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    background-color: #333;
+    border-radius: 0 0 5px 5px;
+
+    input {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+      background-color: #333;
+      border: 1px solid #444;
+      color: #fff;
+    }
+
+    button {
+      background-color: #28a745;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+      margin-right: 40px;
+      margin-left: 20px;
+      font-size: 15px;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: column;
+  }
+  .student-list {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .chat-window {
+    width: 100%;
+  }
+}
